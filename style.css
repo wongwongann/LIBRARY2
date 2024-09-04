@@ -24,6 +24,7 @@ nav ul {
     padding: 0; 
     margin: 10px 0 0 0;
     text-align: center;
+    margin-left: 60%;
 }
 
 nav ul li {
@@ -39,8 +40,7 @@ nav ul li a {
 }
 
 nav ul li:nth-child(4) {
-    margin-left: 60%;
-    margin-right: 0;
+
 }
 
 nav ul li a:hover {
