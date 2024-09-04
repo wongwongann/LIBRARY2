@@ -89,6 +89,7 @@ nav ul li a:hover {
     padding: 0 40px;
     text-align: center;
     transition: height 0.5s;
+    transform: translateX(-10%)
 }
 
 .overlay h3 {
