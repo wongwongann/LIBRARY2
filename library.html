@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Librarynxx</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="pngtree-cat-gaming-logo-png-image_3202895-removebg-preview.png">
+
+</head>
+
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="pngtree-cat-gaming-logo-png-image_3202895-removebg-preview.png" alt="Logo Perpustakaan">
+            <h1>Librarynxx</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="library.html">Home</a></li>
+                <li><a href="booklist.html">Books</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Cari..."></input>
+            </div>
+        </nav>
+    </header>
+
+    <div class="home" id="card-area">
+        <div class="wrapper">
+            <div class="box-area" id="bookList">
+                <div class="box" data-title="Juvenile Offender">
+                    <img src="https://cdn.myanimelist.net/images/manga/2/281692.jpg" alt="Book 1">
+                    <div class="overlay">
+                        <h3>Juvenile Offender</h3>
+                        <p>Manhwa</p>
+                        <a href="#">Baca Sekarang</a>
+                    </div>
+                </div>
+                <div class="box" data-title="Solo Leveling">
+                    <img src="https://i.pinimg.com/originals/a5/72/53/a57253b64aaeb59d97049747c588662c.png" alt="Book 2">
+                    <div class="overlay">
+                        <h3>Solo Leveling</h3>
+                        <p>Manhwa</p>
+                        <a href="#">Baca Sekarang</a>
+                    </div>
+                </div>
+                <div class="box" data-title="Angel Next Door">
+                    <img src="https://media.comikey.com/gazo/480/jpg/comics/0DXwvk/83ad29d9f991.png" alt="Book 3">
+                    <div class="overlay">
+                        <h3>Angel Next Door</h3>
+                        <p>Manga</p>
+                        <a href="#">Baca Sekarang</a>
+                    </div>
+                </div>
+                <div class="box" data-title="Oshi No Ko">
+                    <img src="https://i.redd.it/l66s2mlu9gt91.jpg" alt="Book 1">
+                    <div class="overlay">
+                        <h3>Oshi No Ko</h3>
+                        <p>Manga</p>
+                        <a href="#">Baca Sekarang</a>
+                    </div>
+                </div>
+                <div class="box" data-title="Darling In The Franxx">
+                    <img src="https://i.pinimg.com/736x/55/5f/41/555f41e4cca3c5fddfb669c904b3f288.jpg" alt="Book 2">
+                    <div class="overlay">
+                        <h3>Darling In The Franxx</h3>
+                        <p>Manga</p>
+                        <a href="#">Baca Sekarang</a>
+                    </div>
+                </div>
+                <div class="box" data-title="Tensura">
+                    <img src="https://i.pinimg.com/originals/df/1f/51/df1f516a4de2de0469759e948aefccf8.png" alt="Book 3">
+                    <div class="overlay">
+                        <h3>Tensura</h3>
+                        <p>Manga</p>
+                        <a href="#">Baca Sekarang</a>
+                    </div>
+                </div>
+                <div class="box" data-title="Frieren">
+                    <img src="https://a.storyblok.com/f/178900/1280x1809/7f68d0c0df/frieren-beyond-journey-s-end-second-visual.jpg/m/filters:quality(95)format(webp)" alt="Book 3">
+                    <div class="overlay">
+                        <h3>Frieren Beyond <br> Journey's End</h3>
+                        <p>Manga</p>
+                        <a href="#">Baca Sekarang</a>
+                    </div>
+                </div>
+                <div class="box" data-title="Nier">
+                    <img src="https://upload.wikimedia.org/wikipedia/id/c/c6/Nier_Automata_Ver1.1a_kv.jpg" alt="Book 3">
+                    <div class="overlay">
+                        <h3>Nier: Automata Ver1.1a</h3>
+                        <p>Manga</p>
+                        <a href="#">Baca Sekarang</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <footer>
+        <p>&copy; 2024 Librarynxx. Semua hak cipta dilindungi.</p>
+    </footer>
+
+    <script>
+        // JavaScript Search
+        const searchInput = document.getElementById('searchInput');
+        const bookList = document.getElementById('bookList');
+        const books = bookList.getElementsByClassName('box');
+
+        // Event listener search input
+        searchInput.addEventListener('keyup', function() {
+            const filter = searchInput.value.toLowerCase();
+
+            // Loop all books and hide book if doesn't match the search
+            Array.from(books).forEach(function(book) {
+                const title = book.getAttribute('data-title').toLowerCase();
+                if (title.includes(filter)) {
+                    book.style.display = '';
+                } else {
+                    book.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
